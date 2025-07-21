@@ -15,11 +15,7 @@ jobs:
 
       - name: Zip Lambda files
         run: |
-          mkdir build
-          cp lambda/plantAdvisor.py build/
-          cp data/plant_care.json build/
-          cd build
-          zip -r ../plantHelper.zip .
+          zip -r plantHelper.zip lambda/ data/
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
