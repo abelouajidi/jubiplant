@@ -26,15 +26,17 @@ def lambda_handler(event, context):
     detected = [label['Name'].lower() for label in labels['Labels']]
     
 
-    for name in detected:
-        if name in care_data:
-            return {
-                'statusCode': 200,
-                'body': json.dumps({
-                    'plant': name,
-                    'care': care_data[name]
-                })
-            }
+for name in detected:
+    if name in care_data:
+        result = {
+            'statusCode': 200,
+            'body': json.dumps({
+                'plant': name,
+                'care': care_data[name]
+            })
+        }
+        print("RESULT:", result)
+        return result
 
     return {
         'statusCode': 200,
