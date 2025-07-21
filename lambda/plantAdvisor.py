@@ -9,7 +9,7 @@ s3 = boto3.client('s3')
 with open("data/plant_care.json") as f:
     care_data = json.load(f)
 
-def lambda.plantAdvisor.lambda_handler(event, context):
+def lambda_handler(event, context):
     print("EVENT:", event)
     
     # Get bucket + key
@@ -25,9 +25,6 @@ def lambda.plantAdvisor.lambda_handler(event, context):
     labels = rekognition.detect_labels(Image={'Bytes': image_bytes}, MaxLabels=5)
     detected = [label['Name'].lower() for label in labels['Labels']]
     
-    # Load care data (mock for now)
-    with open("/tmp/plant_care.json") as f:
-        care_data = json.load(f)
 
     for name in detected:
         if name in care_data:
