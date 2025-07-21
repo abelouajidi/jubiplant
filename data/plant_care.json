@@ -1,1 +1,20 @@
-
+{
+  "monstera": {
+    "light": "Bright, indirect light",
+    "water": "Once a week",
+    "temp": "18-27°C",
+    "tip": "Wipe leaves regularly"
+  },
+  "snake plant": {
+    "light": "Low to bright light",
+    "water": "Every 2–3 weeks",
+    "temp": "15-29°C",
+    "tip": "Let soil dry completely"
+  },
+  "spider plant": {
+    "light": "Bright, indirect light",
+    "water": "Once a week",
+    "temp": "13-27°C",
+    "tip": "Avoid direct sunlight"
+  }
+}
