@@ -6,9 +6,8 @@ import os
 rekognition = boto3.client('rekognition')
 s3 = boto3.client('s3')
 
-# Load care tips locally into memory
-with open("/tmp/plant_care.json", "w") as f:
-    f.write('{"placeholder": "This will be replaced"}')  # placeholder
+with open("plant_care.json") as f:
+    care_data = json.load(f)
 
 def lambda_handler(event, context):
     print("EVENT:", event)
