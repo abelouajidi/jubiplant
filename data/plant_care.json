@@ -11,6 +11,12 @@
     "temp": "15-29°C",
     "tip": "Let soil dry completely"
   },
+  "peace lily": {
+    "light": "Indirect to low light",
+    "water": "Once a week or when leaves droop",
+    "temp": "18-27°C",
+    "tip": "Keep soil lightly moist but not soggy"
+  }
   "spider plant": {
     "light": "Bright, indirect light",
     "water": "Once a week",
