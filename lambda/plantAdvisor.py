@@ -6,10 +6,10 @@ import os
 rekognition = boto3.client('rekognition')
 s3 = boto3.client('s3')
 
-with open("plant_care.json") as f:
+with open("data/plant_care.json") as f:
     care_data = json.load(f)
 
-def lambda_handler(event, context):
+def lambda.plantAdvisor.lambda_handler(event, context):
     print("EVENT:", event)
     
     # Get bucket + key
