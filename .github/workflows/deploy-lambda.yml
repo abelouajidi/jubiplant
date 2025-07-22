@@ -13,9 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Zip Lambda files
+      - name: Zip Lambda files (flat structure for Lambda)
         run: |
-          zip -r plantHelper.zip lambda/ data/
+          mkdir build
+          cp lambda/plantAdvisor.py build/
+          cp data/plant_care.json build/
+          cd build
+          zip -r ../plantHelper.zip .
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
