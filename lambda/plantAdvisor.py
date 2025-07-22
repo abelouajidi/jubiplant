@@ -5,7 +5,7 @@ import urllib.parse
 rekognition = boto3.client('rekognition')
 s3 = boto3.client('s3')
 
-# Load care tips from the packaged JSON file
+
 with open("plant_care.json") as f:
     care_data = json.load(f)
 
